@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Frontage-Outline';
+  src: url('fonts/frontage/Frontage-Outline.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Frontage-3D';
+  src: url('fonts/frontage/Frontage-3D.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Frontage-Bulb';
+  src: url('fonts/frontage/Frontage-Bulb.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Bebas-Neue';
+  src: url('fonts/BebasNeue-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Calluna';
+  src: url('fonts/Calluna-Regular.otf') format('opentype');
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-body, .about-content, .foods-content {
+    background: linear-gradient(to right bottom, #dcaf83 50%, #FFF 50%);
+    color: #000;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper, .about-content-wrapper, .foods-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.main-body ul, .about-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-body li, .about-content li {
+    display: inline;
+    list-style: none;
+    font-size: 3.5em;
+     @media (max-width: 500px) {
+       font-size: 2.5em;
+     }
+     padding: 10px;
+}
+
+h1 {
+    font-size: 4em;
+    font-family: 'Frontage-3D';
+    font-weight: normal;
+    
+    @media (max-width: 500px) {
+        font-size: 2em;
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    
+    &:focus,
+    &:hover {
+        opacity: 0.6
+    }
+}
+
+.recipe-content {
+    margin: 16px auto;
+    padding-bottom: 16px;
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.recipe-content h2 {
+    font-family: 'Bebas-Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.recipe-name {
+    font-family: 'Bebas-Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    text-align: center;
+}
+.recipe-name {
+    position: relative;
+}
+
+.recipe-name::before {
+  content: "";
+  position: absolute;
+  bottom: 12%;
+  left: 12%;
+  width: 80%;
+  height: 0.5em;
+  background: #DCAF83;
+  z-index: -1;
+}
+
+.recipe-hero-img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.recipe-ingredients-background-line {
+    width: 0.83em;
+    height: "match-parent";
+    background: #DCAF83;
+    margin-left: 0.83em;
+    margin-top: 0.83em;
+    font-size: 32px;
+}
+
+.recipe-ingredients, .recipe-instructions {
+    font-family: 'Calluna';
+    font-weight: normal;
+    font-size: 1.25em;
+}
+
+.recipe-ingredients {
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    align-content: end;
+    justify-content: end;
+}
+
+.recipe-ingredients ul {
+    list-style: none;
+}
+
+.recipe-ingredients li:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.recipe-instructions {
+    margin-left: 34px;
+}
+
+.recipe-instruction-list-item-title {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+
+.recipe-instructions ol {
+    list-style: none;
+    padding-left: 0px;
+}
+.recipe-instructions li:not(:last-child) {
+    margin-bottom: 2em;
+}
+
+.foods-content-wrapper ul {
+    columns: 2;
+    list-style: none;
+    text-align: center;
+    width: 75%;
+}
+
+.foods-content img {
+    width: 60%;
+}
+
+.foods-content li {
+    position: relative;
+    text-align: center;
+}
+
+.foods-content h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 0;
+    font-family: 'Bebas-Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.recipe-instructions-one-image-container {
+    height: 500px;
+    margin-top: 20px;
+}
+
+.recipe-instructions-one-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-instructions-two-image-container {
+    height: 500px;
+    margin-top: 20px;
+}
+
+.recipe-instructions-two-image-container img {
+    width: 48%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-instructions-two-image-container img + img {
+    margin-left: 1%;
+}
