@@ -38,20 +38,25 @@ body {
     text-align: center;
     height: 100%;
     margin: 0;
+    
 }
 
 .wrapper, .about-content-wrapper, .foods-content-wrapper {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
     align-items: center;
+    align-content: center;
+    overflow-y: auto;
     height: 100%;
     margin: 0;
 }
 
-.main-body ul, .about-content ul {
+/* General Rule: vertically center all pages whose full content fits about the fold */
+.wrapper, .about-content-wrapper {
+    justify-content: center;
+}
+
+.main-body ul, .about-content ul, .foods-content ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -102,6 +107,10 @@ a {
     font-size: 32px;
 }
 
+.recipe-content .left-column {
+    text-align: right;
+}
+
 .recipe-name {
     font-family: 'Bebas-Neue';
     font-style: normal;
@@ -127,6 +136,7 @@ a {
 .recipe-hero-img {
     object-fit: cover;
     width: 100%;
+    max-width: 400px;
 }
 
 .recipe-ingredients-background-line {
@@ -168,49 +178,57 @@ a {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 1px;
+    margin-top: 0;
+}
+
+.recipe-instruction-list-item-number {
+    font-family: 'Bebas-Neue';
+    margin-right: 8px;
+}
+
+.recipe-instruction-list-item {
+    display: grid;
+    grid-template-columns: 5% 95%;
 }
 
 .recipe-instructions ol {
     list-style: none;
     padding-left: 0px;
 }
+
 .recipe-instructions li:not(:last-child) {
     margin-bottom: 2em;
 }
 
-.foods-content-wrapper ul {
-    columns: 2;
-    list-style: none;
-    text-align: center;
-    width: 75%;
-}
 
 .foods-content img {
-    width: 60%;
+    width: 400px;
 }
 
 .foods-content li {
+    display: block;
     position: relative;
+    width: 100%;
     text-align: center;
+    margin-bottom: 1.5em;
 }
 
-.foods-content h2 {
+.foods-content span {
+    display: inline;
     position: absolute;
+    width: 75%;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 12.5%;
     background: white;
-    padding-right: 32px;
-    padding-left: 32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-family: 'Bebas-Neue';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
 }
 
+/* Recipe Images (one or many) are 5 tall & 4 wide */
 .recipe-instructions-one-image-container {
     height: 500px;
     margin-top: 20px;
@@ -218,8 +236,10 @@ a {
 
 .recipe-instructions-one-image-container img {
     width: 100%;
+    max-width: 1080px;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 .recipe-instructions-two-image-container {
