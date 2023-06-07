@@ -28,6 +28,16 @@
   src: url('fonts/Fino-Sans-Medium.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Spectral-Regular';
+  src: url('fonts/spectral/Spectral-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Spectral-Bold';
+  src: url('fonts/spectral/Spectral-Bold.ttf') format('opentype');
+}
+
 html {
     height: 100%;
 }
@@ -105,7 +115,7 @@ a {
 }
 
 .recipe-content h2 {
-    font-family: 'Bebas-Neue';
+    font-family: 'Fino-Sans-Medium';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -116,7 +126,7 @@ a {
 }
 
 .recipe-name {
-    font-family: 'Bebas-Neue';
+    font-family: 'Fino-Sans-Medium';
     font-style: normal;
     font-weight: 400;
     font-size: 80px;
@@ -153,7 +163,7 @@ a {
 }
 
 .recipe-ingredients, .recipe-instructions {
-    font-family: 'Calluna';
+    font-family: 'Spectral-Regular';
     font-weight: normal;
     font-size: 1.25em;
 }
@@ -178,21 +188,11 @@ a {
     margin-left: 34px;
 }
 
-.recipe-instruction-list-item-title {
+.recipe-instruction-list-item-title, .recipe-ingredient-list-item-title {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 1px;
     margin-top: 0;
-}
-
-.recipe-instruction-list-item-number {
-    font-family: 'Bebas-Neue';
-    margin-right: 8px;
-}
-
-.recipe-instruction-list-item {
-    display: grid;
-    grid-template-columns: 5% 95%;
 }
 
 .recipe-instructions ol {
@@ -226,37 +226,9 @@ a {
     background: white;
     padding-top: 8px;
     padding-bottom: 8px;
-    font-family: 'Bebas-Neue';
+    font-family: 'Fino-Sans-Medium';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
 }
 
-/* Recipe Images (one or many) are 5 tall & 4 wide */
-.recipe-instructions-one-image-container {
-    height: 500px;
-    margin-top: 20px;
-}
-
-.recipe-instructions-one-image-container img {
-    width: 100%;
-    max-width: 1080px;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-}
-
-.recipe-instructions-two-image-container {
-    height: 500px;
-    margin-top: 20px;
-}
-
-.recipe-instructions-two-image-container img {
-    width: 48%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.recipe-instructions-two-image-container img + img {
-    margin-left: 1%;
-}
