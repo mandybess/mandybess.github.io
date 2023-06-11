@@ -134,9 +134,10 @@ a {
 /*grid-row-start, grid-column-start, grid-row-end and grid-column-end.*/
 .recipe-hero-img { grid-area: 1 / 1 / 3 / 2; }
 .recipe-name { grid-area: 1 / 2 / 2 / 2; }
-.recipe-ingredients { grid-area: 3 / 1 / 4 / 2; }
+.recipe-ingredients { grid-area: 3 / 1 / 6 / 2; }
 .recipe-instructions { grid-area: 2 / 2 / 5 / 2; }
-.recipe-notes { grid-area: 5 / 2 / 6 / 2; }
+.recipe-notes { grid-area: 6 / 2 / 7 / 2; }
+.recipe-inspirations { grid-area: 5 / 2 / 6 / 2}
 
 .recipe-content h2 {
     font-family: 'Fino-Sans-Medium';
@@ -183,10 +184,23 @@ a {
     font-size: 32px;
 }
 
-.recipe-ingredients, .recipe-instructions, .recipe-notes {
+.recipe-ingredients, .recipe-instructions, .recipe-notes, .recipe-inspirations {
     font-family: 'Spectral-Regular';
     font-weight: normal;
     font-size: 1.25em;
+}
+
+.recipe-inspirations {
+    text-align: center;
+}
+
+.recipe-inspirations p {
+    font-family: 'Spectral-Italic';
+    font-style: italic;
+}
+
+.recipe-inspirations a {
+    color: #DCAF83;
 }
 
 .recipe-ingredients {
@@ -205,7 +219,7 @@ a {
     margin-bottom: 1em;
 }
 
-.recipe-instructions, .recipe-notes {
+.recipe-instructions, .recipe-notes, .recipe-inspirations {
     margin-left: 34px;
 }
 
@@ -226,10 +240,21 @@ a {
     margin-top: 0;
 }
 
-.recipe-instructions ol, .recipe-notes ol {
+.recipe-instructions ol, .recipe-notes, .recipe-inspirations ol {
     list-style: none;
     padding-left: 0px;
 }
+
+.recipe-inspiration-list li {
+    display: inline-flex;
+}
+
+.recipe-inspiration-list li:not(:last-child):after{
+    content: "+";
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 
 .recipe-instructions li:not(:last-child) {
     margin-bottom: 1.5em;
@@ -276,6 +301,7 @@ a {
     .recipe-ingredients { grid-area: 6 / 1 / 8 / 4; }
     .recipe-instructions { grid-area: 14 / 1 / 8 / 4; margin-left: 0; }
     .recipe-notes { grid-area: 14 / 1 / 15 / 4; margin-left: 0; }
+    .recipe-inspirations { grid-area: 15 / 1 / 16 / 4; margin-left: 0; }
     
     .recipe-ingredients ul {
         padding-inline-start: 0px;
